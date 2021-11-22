@@ -11,6 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use('/restaurants', restaurantController)
 
-app.listen('4001' , () => {
-    console.log('connected to port 4001')
+app.listen('4000' , () => {
+    console.log('connected to port 4000')
 })
