@@ -4,7 +4,10 @@ const Restaurant = require("../models/restaurantSchema")
 
 router.post('/', (req, res) => {
     Restaurant.create(req.body)
-        .then(restaurant => res.status(201).json(restaurant))
+        .then(restaurant => {
+            console.log(req.body)
+            res.status(201).json(restaurant)
+        })
 })
 
 router.get('/', (req, res) => {
