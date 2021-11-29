@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/restaurants', {useNewUrlParser:true})
-
 let mongoURI = "";
 
 if (process.env.NODE_ENV === "production") {
@@ -9,6 +7,9 @@ if (process.env.NODE_ENV === "production") {
   } else {
     mongoURI = "mongodb://localhost/restaurants";
   }
+
+
+mongoose.connect(mongoURI, {useNewUrlParser:true})
 
 
 
